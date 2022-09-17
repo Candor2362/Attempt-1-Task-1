@@ -14,9 +14,9 @@ string FormatString(const string& input)
 	for (int i = 0; i < input.length(); ++i)
 	{
 		if (input.find(tolower(input[i])) == input.rfind(tolower(input[i])))
-			output.append("(");
+			output.append("("); //Character is unique, therefore symbol '(' is added to the output string
 		else
-			output.append(")");
+			output.append(")"); //Character is nonunique, therefore ')'
 	}
 
 	std::cout << "Input string: " << input << endl;
